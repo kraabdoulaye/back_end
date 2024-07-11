@@ -1,0 +1,12 @@
+import { IDao } from '../core/types/IDao';
+import { <%= moduleName %>Document } from '../models/<%= moduleName %>.model';
+
+export default class <%= moduleName %>Controller {
+  private readonly <%= moduleName.toLowerCase() %>Dao: IDao<<%= moduleName %>Document>;
+
+  constructor(<%= moduleName.toLowerCase() %>Dao: IDao<<%= moduleName %>Document>) {
+    this.<%= moduleName.toLowerCase() %>Dao = <%= moduleName.toLowerCase() %>Dao;
+  }
+
+  // Implémenter les méthodes du contrôleur selon les besoins
+}

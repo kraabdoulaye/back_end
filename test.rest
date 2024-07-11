@@ -1,0 +1,4 @@
+get https://httpbin.org/ip
+Content-Type: application/json
+
+get https://google.ci

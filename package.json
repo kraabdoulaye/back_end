@@ -1,0 +1,46 @@
+{
+  "name": "service_refdata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node ./build/app.js",
+    "dev": "npx tsc && nodemon ./build/app.js",
+    "create-module": "node src/core/scripts/module.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.4.1",
+    "@fastify/swagger-ui": "^1.9.3",
+    "@types/mysql": "^2.15.21",
+    "@types/pdf": "^0.0.31",
+    "bcrypt": "^5.1.0",
+    "docx": "^8.5.0",
+    "dotenv": "^16.3.1",
+    "exceljs": "^4.3.0",
+    "fastify": "^4.18.0",
+    "fastify-env": "^2.2.0",
+    "fastify-multer": "^2.0.3",
+    "fastify-multipart": "^5.4.0",
+    "fastify-swagger": "^5.2.0",
+    "git": "^0.1.5",
+    "jsonwebtoken": "^9.0.1",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.3.1",
+    "mongose": "^0.0.2-security",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.4.2",
+    "nodemon": "^3.0.1",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@fastify/static": "^5.0.0",
+    "@fastify/swagger": "^8.9.0",
+    "@types/node": "^20.3.1",
+    "ejs": "^3.1.9",
+    "typescript": "^5.1.3"
+  }
+}

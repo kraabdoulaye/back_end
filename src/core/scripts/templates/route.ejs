@@ -1,0 +1,19 @@
+import { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
+import {<%= moduleName %>Controller} from '../controllers';
+import { daoFactory } from '../core/DAO/DaoFactory';
+import { <%= moduleName %>Document, <%= moduleName %>Model } from '../models/<%= moduleName %>.model';
+
+export default async function (<%= moduleName.toLowerCase() %>App: FastifyInstance, opts: any) {
+    const <%= moduleName.toLowerCase() %>Dao = await daoFactory<<%= moduleName %>Document>(<%= moduleName %>Model, '<%= moduleName.toLowerCase() %>');
+    const <%= moduleName.toLowerCase() %>Controller = new <%= moduleName %>Controller(<%= moduleName.toLowerCase() %>Dao);
+
+  <%= moduleName.toLowerCase() %>App.route({
+    method: 'GET',
+    url: '/',
+    handler: async (request: FastifyRequest, reply: FastifyReply) => {
+      const examples = '//appeler la methode du controleur correspondante ici'
+      reply.send(examples);
+    },
+  });
+
+}

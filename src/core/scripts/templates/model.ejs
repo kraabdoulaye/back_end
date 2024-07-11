@@ -1,0 +1,13 @@
+import { Schema, model, Document } from 'mongoose';
+
+export interface <%= moduleName %> {
+  // Définir les propriétés du modèle <%= moduleName %>
+}
+
+export type <%= moduleName %>Document = <%= moduleName %> & Document;
+
+const <%= moduleName %>Schema = new Schema<<%= moduleName %>>({
+  // Définir la structure du schéma <%= moduleName %>
+});
+
+export const <%= moduleName %>Model = model<<%= moduleName %>Document>('<%= moduleName %>', <%= moduleName %>Schema);

@@ -1,0 +1,29 @@
+class Personne {
+    constructor(nom, age) {
+        this.nom = nom;
+        this.age = age;
+    }
+
+    saluer() {
+        console.log("Bonjour, je m'appelle " + this.nom + " et j'ai " + this.age + " ans.");
+    }
+}
+
+// Création d'une instance d'objet à partir de la classe "Personne"
+let personne1 = new Personne("Alice", 30);
+personne1.saluer(); // Affiche "Bonjour, je m'appelle Alice et j'ai 30 ans."
+
+// Création d'une sous-classe "Etudiant" qui hérite de la classe "Personne"
+class Etudiant extends Personne {
+    constructor(nom, age, niveau) {
+        super(nom, age);
+        this.niveau = niveau;
+    }
+
+    saluer() {
+        console.log("Salut, je suis un étudiant de niveau " + this.niveau + ".");
+    }
+}
+
+let etudiant1 = new Etudiant("Bob", 20, "Bac+2");
+etudiant1.saluer(); // Affiche "Salut, je suis un étudiant de niveau Bac+2."
